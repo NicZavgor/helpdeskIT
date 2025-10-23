@@ -229,8 +229,6 @@
         $text = (document.getElementById('content').innerHTML);
 
 
-        //$text = (document.getElementById('hiddenContent').value);
-
         try {
              const response = await fetch('?page=article&api&action=edit', {
                                  method: 'POST',
@@ -243,10 +241,7 @@
 
                                  })
                              });
-            //console.log(response);
-            //const response = await fetch('models/dbcategories.php', { method: 'POST', body: formData});
             const result = await response.json();
-            //console.log(result);
 
             if (result.success===true) {
                 alert('Данные успешно сохранены!');

@@ -123,8 +123,6 @@
                     <?=$OneEmployee['account']?>
                 </td>
                 <td>
-
-
                         <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editModal"
                                 onclick="fillEditForm(this)"
                                 data-id="<?=$OneEmployee['guidemployee']?>"
@@ -134,13 +132,6 @@
                                 data-account="<?=$OneEmployee['account']?>">
                             ...
                         </button>
-
-
-
-
-
-
-
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -248,13 +239,6 @@
             document.getElementById('modalSubdivision').textContent = button.getAttribute('data-Subdivision');
             document.getElementById('editAccount').value = button.getAttribute('data-account');
         }
-
-
-//Добавьте валидацию формы
-//Реализуйте AJAX-запросы для сохранения данных на сервере
-//Добавьте обработку ошибок
-//Можете добавить анимацию при сохранении
-//Добавьте подтверждение перед сохранением
 
 
         // Сохранение изменений

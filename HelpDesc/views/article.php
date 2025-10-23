@@ -44,31 +44,6 @@
                             <?=$wikiTopic[0]['text']?>
 
                         </article>
-
-                        <!-- Навигация
-                        <div class="d-flex justify-content-between mt-5 pt-4 border-top">
-                            <a href="#" class="btn btn-outline-primary">
-                                <i class="bi bi-arrow-left"></i> Предыдущая статья
-                            </a>
-                            <a href="#" class="btn btn-outline-primary">
-                                Следующая статья <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div> -->
-
-                        <!--
-                        <div class="card mt-4">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Была ли эта статья полезной?</h5>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-outline-success">
-                                        <i class="bi bi-hand-thumbs-up"></i> Да
-                                    </button>
-                                    <button type="button" class="btn btn-outline-danger">
-                                        <i class="bi bi-hand-thumbs-down"></i> Нет
-                                    </button>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
 
 
