@@ -43,14 +43,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'login') {
         exit();
 
     }
-    
-    //SELECT * FROM users WHERE login = $login ==> $hash
-    //if ($login === 'admin' && $password === '123') {
-    //  $_SESSION['login'] = 'admin';
-    //    $_SESSION['role'] = 'admin';
-    //    header('Location: index.php');
-    //    exit();
-    //}
+
+
 }
 
 
