@@ -616,16 +616,6 @@
                       </button>
                   </div>
                    </li>`;
-                 /*`<li>
-                    <a href="#" data-id="${item.id}">
-
-                        <i class="bi bi-list-task"></i>
-                        <span class="badge ${urgencyColor} text-white">${item.urgency_name}</span>
-                        ${item.name}
-                        Период ${item.start_date} -  ${item.end_date}
-
-                        <button type="button" class="btn btn-primary "  data-bs-dismiss="modal"><i class="bi bi-pencil"></i></button>
-                    </a>`;*/
 
                 // Рекурсивно отображаем дочерние элементы
                 const hasChildren = data.some(child => child.parent_id == item.id);
