@@ -13,19 +13,12 @@
             "TrustServerCertificate" => true, // Рекомендуется для Windows Authentication
             "CharacterSet" => "UTF-8"  // Опционально, для поддержки UTF-8
         );
-        //die( print_r( phpinfo(), true));
-        //die( print_r( $serverName, true));
         $conn = sqlsrv_connect($serverName, $connectionOptions);
-        ///die( print_r("12111q", true));
-        //die(" getDB ".print_r($db));
         if( $conn === false ) {
 
              die( print_r( "Ошибка подключения !!! ".sqlsrv_errors(), true));
         }
 
-
-
-//        $conn = getDb();
         if ($conn === false) {
             throw new Exception("Не удалось подключиться к SQL Server: " . print_r(sqlsrv_errors(), true));
         }
@@ -43,11 +36,6 @@
         while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
             $departments[] = $row;
         }
-        //die(print_r($departments));
-        // Закрываем соединение
-        //sqlsrv_free_stmt($stmt);
-        //sqlsrv_close($conn);
-
         // Возвращаем данные в формате JSON
         echo json_encode($departments);
 

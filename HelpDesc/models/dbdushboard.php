@@ -43,28 +43,10 @@ function getRequestStatusProportion(int $userid): bool|array
         //$stmt = sqlsrv_prepare($conn, $select, array(&$strItRole, &$userid, &$strItRole, &$userid,&$strItRole, &$userid,&$strItRole, &$userid));
     }else{
         $select = str_replace("$$$", "", $select);
-        //$stmt = sqlsrv_prepare($conn, $select, null);
     }
-    //die(print_r($resultArray));
-//    die(print_r($select));
     $stmt = getDb()->prepare($select);
     $stmt->execute($params);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-/*
-    sqlsrv_execute($stmt);
-    $resultArray = array();
-    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-        $resultArray[] = $row;
-    }
-    //die(print_r($resultArray));
-    //die(print_r($deadline));
-    //die(print_r($queryarray));
-    sqlsrv_free_stmt( $stmt); //закрываем запрос
-
-
-    return $resultArray;
-    */
 }
 
 function getRequestCategoryProportionToStr(int $userid): array

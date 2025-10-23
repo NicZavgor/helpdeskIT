@@ -74,18 +74,6 @@ function getForApproveSoundsCount(): int
     $stmt->execute();
     return $stmt->fetch()['cnt'];
 }
-
-/*
-function setAproveSound(int $id): void
-{
-    //if (!isset($_SESSION['userid'])) {return;}
-    $update = "update sounds set approve=1 where id=:id";
-    $stmt = getDb()->prepare($update);
-    $stmt->execute([
-        ":id" => $id
-    ]);
-}
-*/
 function InsertOrUpdateSound(int $id, string $title, string $text, int $category, string $path, int $userid): int
 {
     $retID = 0;

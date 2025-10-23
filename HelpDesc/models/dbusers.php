@@ -38,18 +38,6 @@ function insertUser(string $name, string $itrole, bool $changepass, string $pass
             $stmt = getDb()->prepare($insert);
             $stmt->execute([":employee"=>"111", ":name" => $name, ":itrole"=>$itrole]);
         }
-        /*if ($stmt === false) {
-            sqlsrv_free_stmt( $stmt);
-            return 'Ошибка сохранения данных';
-        }
-        if (sqlsrv_fetch($stmt)) {
-            $insertedId = sqlsrv_get_field($stmt, 0);
-            sqlsrv_free_stmt( $stmt);
-            return 1;
-        } else {
-            sqlsrv_free_stmt( $stmt);
-            return 0;
-        }*/
     } catch (PDOException $e) {
             return 'Ошибка базы данных: ' . $e->getMessage();
     }
@@ -160,16 +148,6 @@ function  getUsersCount(string $strSearch): int
 
 function getItRoleById(int $userid)
 {
-    /*
-    $str = "";
-    $select = "select itrole FROM users where id=? ";
-    $conn = getDb();
-    $stmt = sqlsrv_prepare($conn, $select, array(&$userid));
-    sqlsrv_execute($stmt);
-    $userDb = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
-    sqlsrv_free_stmt( $stmt); //закрываем запрос, закрывать соединение НЕЛЬЗЯ !!!
-    return $userDb['itrole'];
-    */
     $select = "select itrole FROM users where id=:id ";
     $stmt = getDb()->prepare($select);
     $stmt->execute([":id" => $userid]);
